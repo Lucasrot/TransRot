@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 
 // Define las fechas y horas en Buenos Aires
 const endtime1 = DateTime.fromISO('2024-09-22T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
-const endtime2 = DateTime.fromISO('2024-09-15T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' }); // Nueva fecha para el segundo cronómetro
+const endtime2 = DateTime.fromISO('2024-09-13T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' }); // Nueva fecha para el segundo cronómetro
 
 // Función para calcular el tiempo restante
 const getTimeRemaining = (endtime) => {
@@ -198,7 +198,7 @@ const { days: days2, hours: hours2, minutes: minutes2, seconds: seconds2 } = get
 
   // Define las fechas y horas en Buenos Aires
   const endtime1 = DateTime.fromISO('2024-09-22T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
-  const endtime2 = DateTime.fromISO('2024-09-15T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
+  const endtime2 = DateTime.fromISO('2024-09-13T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
 
   function getTimeRemaining(endtime) {
     const now = DateTime.now().setZone('America/Argentina/Buenos_Aires');
