@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import Logo from "../assets/img/Logo-ico.png"
+import Logo from "../assets/img/Logo-ico.ico";
 ---
 
 <!doctype html>
@@ -16,7 +16,7 @@ import Logo from "../assets/img/Logo-ico.png"
 		<meta name="description" content="En TransRotViajes, ofrecemos experiencias de viaje únicas en Argentina, Brasil y viajes de egresados, bajo la dirección de Edgardo Roteño. Especializados en viajes para grupos y egresados, garantizamos comodidad y satisfacción en cada aventura. ¡Descubre nuevos destinos con nosotros!">
         <meta name="keywords" content="viajes Argentina, viajes Brasil, viajes grupales, viajes de egresados, Transrotviajes , experiencias de viaje, Edgardo Roteño, turismo en Argentina, turismo en Brasil">
 		<title>{title}</title>
-		<link rel="icon" href={Logo.src} type="image/png">
+		<link rel="icon" href={Logo} type="image/png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<link rel="stylesheet" href="../style/global.css">
 		<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
