@@ -3,7 +3,7 @@
 import { DateTime } from 'luxon';
 
 // Define las fechas y horas en Buenos Aires
-const endtime1 = DateTime.fromISO('2024-09-22T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
+const endtime1 = DateTime.fromISO('2024-10-27T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
 const endtime2 = DateTime.fromISO('2024-09-13T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' }); // Nueva fecha para el segundo cronómetro
 
 // Función para calcular el tiempo restante
@@ -21,183 +21,93 @@ const getTimeRemaining = (endtime) => {
 
 const { days: days1, hours: hours1, minutes: minutes1, seconds: seconds1 } = getTimeRemaining(endtime1);
 const { days: days2, hours: hours2, minutes: minutes2, seconds: seconds2 } = getTimeRemaining(endtime2);
+
+import TermasDeColón from "../assets/img/viajes/Termas de Colón.jpg";
+
 ---
 
-<section class="w-full h-full py-2 flex flex-col sm:flex-row items-baseline bg-gradient-to-b to-violet-500 via-white from-green-500" id="Proximoviaje">
-<!-- Primer cronómetro -->
-  <main class="dark:bg-gray-300 w-full h-3/6 py-2 flex flex-col sm:flex-row items-center justify-center rounded-sm">
-    <div class="w-full h-full max-w-screen-lg flex flex-col gap-4 items-center justify-center p-2 mx-1 rounded-lg text-transparent bg-clip-text shadow-md shadow-gray-950">
-      <h2 class="text-gray-900 text-2xl sm:text-3xl font-bold text-center drop-shadow-md">Próximo viaje al Tigre</h2>
-      <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">A festejar Día del Maestro y el Día de la Primavera</p>
-      <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Fecha de salida: 22/9/2024 Hora: 07:00hs</p>
-      <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Salida del Tigre, día 22/9/24 Hora: 17:00hs</p>
-      <!-- Precio -->
-      <p class="text-gray-900 text-3xl sm:text-4xl font-extrabold mt-4 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 text-transparent bg-clip-text p-4 rounded-lg shadow-md inline-block">
-        Precio: <span class="text-blue-700">$40.000,</span>
-      </p>
-      <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Faltan para el gran día:</p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-        <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-          <span class="font-mono text-3xl sm:text-5xl" id="days1">{days1}</span>
-          <span class="text-sm sm:text-base">Día</span>
-        </div>
-        <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-          <span class="font-mono text-3xl sm:text-5xl" id="hours1">{hours1}</span>
-          <span class="text-sm sm:text-base">Hora</span>
-        </div>
-        <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-          <span class="font-mono text-3xl sm:text-5xl" id="minutes1">{minutes1}</span>
-          <span class="text-sm sm:text-base">Minuto</span>
-        </div>
-        <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-          <span class="font-mono text-3xl sm:text-5xl" id="seconds1">{seconds1}</span>
-          <span class="text-sm sm:text-base">Segundo</span>
-        </div>
-      </div>
-      
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
-        <a href="https://www.facebook.com/TransRotViajesDolores" target="_blank" rel="noopener noreferrer">
-          <button class="text-white flex justify-center bg-[#1877F2] rounded-lg hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-8 py-2 w-full sm:w-auto">
-            Contáctanos y Reserva tu lugar
-            <svg class="w-5 h-5 sm:h-6 sm:w-6 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_3033_94669)">
-                <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="white"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_3033_94669">
-                  <rect width="24" height="24" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-        </a>
-        <a href="https://wa.me/542245555831" target="_blank">
-          <button class="text-white flex justify-center bg-[#25D366] rounded-lg hover:bg-[#25D366]/80 duration-300 transition-colors border border-transparent px-8 py-2 w-full sm:w-auto">
-            Contáctanos y Reserva tu lugar
-            <svg class="w-5 h-5 sm:h-6 sm:w-6 ml-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.002 0C7.163 0 0 7.163 0 16.002c0 2.818.736 5.579 2.13 7.998L0 32l8.15-2.115a16.025 16.025 0 0 0 7.852 2.116c8.838 0 16-7.163 16-16.002 0-8.838-7.162-16-16-16Zm7.558 22.51c-.352.993-1.744 1.824-2.928 2.03-.748.128-1.717.23-5.071-1.07-4.233-1.647-6.934-5.665-7.147-5.932-.21-.27-1.705-2.269-1.705-4.33 0-2.06 1.077-3.07 1.46-3.48.387-.413.86-.515 1.147-.515.286 0 .573.002.821.015.268.013.632-.103.99.762.372.893 1.26 3.08 1.37 3.303.105.222.175.482.034.774-.14.29-.21.466-.415.719-.21.26-.44.581-.63.778-.216.225-.44.471-.19.922.25.446 1.11 1.83 2.387 2.963 1.645 1.47 3.02 1.93 3.457 2.148.436.217.69.18.948-.11.258-.29 1.1-1.28 1.392-1.722.293-.443.596-.371.992-.216.397.156 2.513 1.184 2.946 1.397.434.215.744.32.854.495.107.178.107 1.034-.245 2.026Z" fill="white"/>
-            </svg>
-          </button>
-        </a>
-      </div>
-    </div>
-  </main>
-<!-- Segunda sección con el segundo cronómetro -->
-  <section class="dark:bg-gray-300 w-full h-3/6 py-1 flex flex-col sm:flex-row items-center justify-center rounded-sm">
-    <main class="w-full h-full max-w-screen-lg flex flex-col gap-1 items-center justify-center p-2 mx-1 rounded-lg text-transparent bg-clip-text shadow-md shadow-gray-950">
-    <h2 class="text-gray-900 text-2xl sm:text-3xl font-bold text-center drop-shadow-md">Próximo viaje a SALTA</h2>
-    <p class="text-gray-900 text-xl sm:text-lg font-semibold text-center drop-shadow-md">Día de la Virgen de los Milagros</p>
-    
-    <div id="accordion-collapse" data-accordion="collapse" class="text-black my-2 shadow-md shadow-gray-950">
-      <h3 id="accordion-collapse-heading-1">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-800 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-          <span>Información General del Viaje</span>
-          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-          </svg>
-        </button>
-      </h3>
-      <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-        <div class="p-2 border border-b-0 border-gray-200 bg-gray-50">
-          <p class="mb-2 text-gray-900">6 días 🌝 4 noches 🌜</p>
-          <p class="mb-2 text-gray-900">Estadía en hoteles 🏨</p>
-          <ul class="list-disc pl-6 mb-4">
-            <li>
-              <span class="font-semibold">2 noches 🌙 en Cafayate:</span> con 1/2 pensión
-            </li>
-            <li>
-              <span class="font-semibold">2 noches 🌙 en Termas de Río Hondo:</span> con pensión completa
-            </li>
-          </ul>
-          <p class="text-gray-900">
-            Excursión por camino Tafi del Valle, anfiteatro, Salta (cerro de la Virgen día 15)
-          </p>
-        </div>
-      </div>
-      <h3 id="accordion-collapse-heading-2">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-800 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-          <span>Detalles de la Excursión</span>
-          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-          </svg>
-        </button>
-      </h3>
-      <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-        <div class="p-2 border border-b-0 border-gray-200 bg-gray-50">
-          <p class="text-gray-900">
-            La excursión incluye el recorrido por el camino Tafi del Valle, visita al anfiteatro y a Salta, destacando el cerro de la Virgen el día 15.
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Fecha de salida: 13/9/24</p>
-    <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Salida de Salta, día 19/9/24</p>
-    <!-- Precio -->
-    <p class="text-gray-900 text-3xl sm:text-4xl font-extrabold mt-4 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 text-transparent bg-clip-text p-4 rounded-lg shadow-md inline-block">
-      Valor promocional: <span class="text-blue-700">$295.000,</span>
+
+<section class="card lg:card-side bg-base-100 shadow-xl mx-4 my-2" id="Proximoviaje">
+  <figure>
+    <img
+      src={TermasDeColón.src}
+      alt="Imagen de las Termas de Colón, un destino turístico en Entre Ríos, Argentina" 
+      class="object-cover w-full h-64 lg:h-5/6"
+    />
+  </figure>
+  <div class="card-body flex flex-col ">
+    <h2 class="card-title text-5xl font-semibold text-blue-600">
+      Próximo viaje a Termas de Colón
+    </h2>
+
+    <p class="text-gray-900 text-xl font-semibold">
+      Fecha de salida: Domingo 27/10/24
     </p>
-    <p class="text-gray-900 text-base sm:text-lg font-semibold text-center drop-shadow-md">Faltan para el gran día:</p>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-      <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-        <span class="font-mono text-3xl sm:text-5xl" id="days2">
-          {days2}
-        </span>
-        <span class="text-sm sm:text-base">days</span>
+    <p class="text-gray-900 text-xl font-semibold">
+      A pasar el día (Full Time)
+    </p>
+    <span class="block text-3xl font-bold text-gray-900" itemprop="offers">
+      <span itemprop="price">$60.000</span>
+      <meta itemprop="priceCurrency" content="ARS" />
+    </span>
+    <section class="mt-4">
+      <h3 class="text-gray-900 text-lg font-semibold mb-2">
+        Faltan para el gran día:
+      </h3>
+      <div class="grid grid-cols-4 gap-4 text-center">
+        <div class="bg-neutral rounded-lg p-3 flex flex-col">
+          <span class="font-mono text-4xl text-white" id="days1">{days1}</span>
+          <span class="text-sm text-white">Día</span>
+        </div>
+        <div class="bg-neutral rounded-lg p-3 flex flex-col">
+          <span class="font-mono text-4xl text-white" id="hours1">{hours1}</span>
+          <span class="text-sm text-white">Hora</span>
+        </div>
+        <div class="bg-neutral rounded-lg p-3 flex flex-col">
+          <span class="font-mono text-4xl text-white" id="minutes1">{minutes1}</span>
+          <span class="text-sm text-white">Minuto</span>
+        </div>
+        <div class="bg-neutral rounded-lg p-3 flex flex-col">
+          <span class="font-mono text-4xl text-white" id="seconds1">{seconds1}</span>
+          <span class="text-sm text-white">Segundo</span>
+        </div>
       </div>
-      <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-        <span class="font-mono text-3xl sm:text-5xl" id="hours2">
-          {hours2}
-        </span>
-        <span class="text-sm sm:text-base">hours</span>
-      </div>
-      <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-        <span class="font-mono text-3xl sm:text-5xl" id="minutes2">
-          {minutes2}
-        </span>
-        <span class="text-sm sm:text-base">min</span>
-      </div>
-      <div class="bg-neutral rounded-lg text-neutral-content flex flex-col p-2">
-        <span class="font-mono text-3xl sm:text-5xl" id="seconds2">
-          {seconds2}
-        </span>
-        <span class="text-sm sm:text-base">sec</span>
-      </div>
-    </div>
-    <div class="flex flex-col sm:flex-row gap-4 mt-4 w-full items-center justify-center">
-      <a href="https://www.facebook.com/TransRotViajesDolores" target="_blank" rel="noopener noreferrer">
-        <button class="text-white flex justify-center bg-[#1877F2] rounded-lg hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-8 py-2 w-full sm:w-auto"> 
-          Contactanos y Reserva tu lugar 
-          <svg class="w-5 h-5 sm:h-6 sm:w-6 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> 
-            <g clip-path="url(#clip0_3033_94669)">
-              <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="white"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_3033_94669">
-                <rect width="24" height="24" fill="white"/>
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
+    </section>
+
+    <div class="card-actions justify-end mt-6">
+      <a href="https://wa.me/542245555831" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
+          <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
+        </svg>
+        <div class="text-left rtl:text-right">
+          <div class="mb-1 text-xs">Contáctanos</div>
+          <div class="-mt-1 font-sans text-sm font-semibold">Reserva tu lugar</div>
+        </div>
       </a>
-      <a href="https://wa.me/542245555831" target="_blank">
-        <button class="text-white flex justify-center bg-[#25D366] rounded-lg hover:bg-[#25D366]/80 duration-300 transition-colors border border-transparent px-8 py-2 w-full sm:w-auto">
-          Contáctanos y Reserva tu lugar
-          <svg class="w-5 h-5 sm:h-6 sm:w-6 ml-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16.002 0C7.163 0 0 7.163 0 16.002c0 2.818.736 5.579 2.13 7.998L0 32l8.15-2.115a16.025 16.025 0 0 0 7.852 2.116c8.838 0 16-7.163 16-16.002 0-8.838-7.162-16-16-16Zm7.558 22.51c-.352.993-1.744 1.824-2.928 2.03-.748.128-1.717.23-5.071-1.07-4.233-1.647-6.934-5.665-7.147-5.932-.21-.27-1.705-2.269-1.705-4.33 0-2.06 1.077-3.07 1.46-3.48.387-.413.86-.515 1.147-.515.286 0 .573.002.821.015.268.013.632-.103.99.762.372.893 1.26 3.08 1.37 3.303.105.222.175.482.034.774-.14.29-.21.466-.415.719-.21.26-.44.581-.63.778-.216.225-.44.471-.19.922.25.446 1.11 1.83 2.387 2.963 1.645 1.47 3.02 1.93 3.457 2.148.436.217.69.18.948-.11.258-.29 1.1-1.28 1.392-1.722.293-.443.596-.371.992-.216.397.156 2.513 1.184 2.946 1.397.434.215.744.32.854.495.107.178.107 1.034-.245 2.026Z" fill="white"/>
-          </svg>
-        </button>
+
+      <a href="https://www.facebook.com/TransRotViajesDolores" target="_blank" class="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+        </svg>
+        <div class="text-left rtl:text-right">
+          <div class="mb-1 text-xs">Contáctanos</div>
+          <div class="-mt-1 font-sans text-sm font-semibold">Reserva tu lugar</div>
+        </div>
       </a>
     </div>
-    </main>
-  </section>
+  </div>
 </section>
+
+
+
+
 
 <script>
   import { DateTime } from 'luxon';
 
   // Define las fechas y horas en Buenos Aires
-  const endtime1 = DateTime.fromISO('2024-09-22T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
+  const endtime1 = DateTime.fromISO('2024-10-27T07:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
   const endtime2 = DateTime.fromISO('2024-09-13T09:00:00-03:00', { zone: 'America/Argentina/Buenos_Aires' });
 
   function getTimeRemaining(endtime) {

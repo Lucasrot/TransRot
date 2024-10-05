@@ -1,13 +1,15 @@
 ---
 import ViajesCompletos1 from "../assets/img/viajes/viajesCompletos1.jpg";
 import ViajesCompletos2 from "../assets/img/viajes/viajesCompletos2.jpg";
+import TigreCompleto3 from "../assets/img/viajes/tigre.jpg";
+import Salta from "../assets/img/viajes/Salta.jpg";
 ---
 <section class="bg-gray-100 py-16" id="Viajes">
     <div class="container mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Viajes con Pasajes Agotados</h3>
-      <p class="text-lg text-center text-gray-600 mb-11">Estos viajes han alcanzado su capacidad máxima. Gracias por su interés.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Viajes Completos: Pasajes Agotados</h3>
+      <p class="text-lg text-center text-gray-600 mb-8 mx-20">Nuestros viajes más populares han alcanzado su capacidad total o ya se han realizado. ¡Gracias por tu interés! Mantente atento para futuras salidas y nuevas experiencias de viaje.</p>
+      <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section class="bg-white shadow-md rounded-lg overflow-hidden">
             <img src={ViajesCompletos2.src} alt="Foto de Cataratas del Iguazu" class="w-full h-48 object-cover"/>
             <div class="p-6">
               <h3 class="text-xl font-semibold text-gray-800 mb-2">Cataratas del Iguazu</h3>
@@ -20,9 +22,9 @@ import ViajesCompletos2 from "../assets/img/viajes/viajesCompletos2.jpg";
               </div>
               <p class="text-lg font-semibold text-red-600">¡Completo!</p>
             </div>
-        </div>
-<!-- tarjetas para otros viajes -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        </section>
+  <!-- tarjetas 2 -->
+        <section class="bg-white shadow-md rounded-lg overflow-hidden">
             <img src={ViajesCompletos1.src} alt="Foto de Termas de Colon" class="w-full h-48 object-cover"/>
             <div class="p-6">
               <h3 class="text-xl font-semibold text-gray-800 mb-2">Termas de Colon</h3>
@@ -35,7 +37,37 @@ import ViajesCompletos2 from "../assets/img/viajes/viajesCompletos2.jpg";
               </div>
               <p class="text-lg font-semibold text-red-600">¡Completo!</p>
             </div>
-        </div>
-      </div>
+        </section>
+  <!-- tarjetas 3 -->
+        <section class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src={TigreCompleto3.src} alt="Foto de Termas de Colon" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Viaje al Tigre</h3>
+            <p class="text-gray-600 mb-2">Fecha de salida: 22/9/2024</p>
+            <p class="text-gray-600 mb-2">Salida del Tigre, día 22/9/24 Hora: 17:00hs</p>
+            <p class="text-gray-600 mb-4">Ubicación: Tigre, Provincia de Buenos Aires</p>
+            <div class="flex items-center text-gray-800 font-semibold">
+              <i class="fas fa-map-marker-alt text-gray-600 text-xl mr-2"></i>
+              <p>Salida a las  07:00hs, desde la Terminal de Dolores</p>
+            </div>
+              <p class="text-lg font-semibold text-red-600">¡Completo!</p>
+          </div>
+        </section>
+  <!-- tarjetas 4 -->
+        <section class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src={Salta.src} alt="Foto de Termas de Colon" class="w-full h-48 object-fill"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Viaje a SALTA</h3>
+            <p class="text-gray-600 mb-2">Fecha de salida:  13/9/24</p>
+            <p class="text-gray-600 mb-2">Salida de Salta, día 19/9/24</p>
+            <p class="text-gray-600 mb-4">Ubicación: SALTA</p>
+            <div class="flex items-center text-gray-800 font-semibold">
+              <i class="fas fa-map-marker-alt text-gray-600 text-xl mr-2"></i>
+              <p>Salida a las  07:00hs, desde la Terminal de Dolores</p>
+            </div>
+              <p class="text-lg font-semibold text-red-600">¡Completo!</p>
+          </div>
+        </section>
+      </main>
     </div>
 </section>
